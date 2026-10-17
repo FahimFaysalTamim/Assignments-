@@ -1,0 +1,1 @@
+<img src="{{ asset('assets/frontend/images/logo.png') }}" alt="LinkedIn Logo" class="h-10 w-auto">
