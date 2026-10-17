@@ -1,0 +1,50 @@
+
+Configure a Router as a DHCP Server:
+
+enable
+conf t
+ip dhcp excluded-address 192.168.10.1 192.168.10.10
+ip dhcp excluded-address 192.168.30.1 192.168.30.10
+
+
+configuring R1-LAN:
+
+ip dhcp pool R1-LAN
+network 192.168.10.0 255.255.255.0
+default-router 192.168.10.1
+dns-server 192.168.20.254
+exit 
+
+Configuring R3-LAN:
+
+ip dhcp pool R3-LAN
+network 192.168.30.0 255.255.255.0
+default-router 192.168.30.1
+dns-server 192.168.20.254
+
+
+Configure DHCP Relay:
+R1:
+
+enable
+conf t
+interface gigabitEthernet 0/0
+ip helper-address 10.1.1.2
+
+R3:
+
+enable
+conf t
+interface gigabitEthernet 0/0
+ip helper-address 10.2.2.2
+
+
+
+Configure R2 as a DHCP Client:
+
+enable
+conf t
+interface gigabitEthernet 0/1
+ip address dhcp
+no shut
+

@@ -1,0 +1,19 @@
+Part 01:
+Step 01:
+
+en
+conf t
+ip route 0.0.0.0 0.0.0.0 s0/0/0
+
+Step 02:
+
+enable
+conf t
+ip route 0.0.0.0 0.0.0.0 s0/0/1 5
+
+Part 03:
+Step 01:
+
+en
+conf t
+ipv6 route ::/0 2001:DB8:A:2::1 5
