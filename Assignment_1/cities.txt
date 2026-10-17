@@ -1,0 +1,9 @@
+A 7 B 2 D 4 C 3
+B 5 A 2 E 2 F 3
+C 9 A 3 J 7
+D 6 A 4 H 4 F 2
+E 3 B 2
+F 5 D 2 B 3
+H 3 D 4 G 3
+J 4 C 7 G 4
+G 0 F 3 J 4
